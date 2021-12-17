@@ -7,7 +7,7 @@ const HeaderView = ({ title, onClick, type }) => {
         <h1 className={style.header__title}>{title}</h1>
         {type !== "Home" ? (
           <button className={style.header__button} onClick={onClick}>
-            Назад
+            Перейдите к родительскому узлу
           </button>
         ) : null}
       </header>

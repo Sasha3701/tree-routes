@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { addRoute } from "../utils";
 import { v4 } from "uuid";
 
 export const routesSlice = createSlice({
@@ -35,7 +36,10 @@ export const routesSlice = createSlice({
     ],
   },
   reducers: {
-    add: (state, action) => {},
+    add: (state, action) => {
+      const { parent, route } = action.payload;
+      state.value = addRoute(state.value, parent, route);
+    },
   },
 });
 
