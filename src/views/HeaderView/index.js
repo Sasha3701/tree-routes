@@ -1,14 +1,18 @@
 import style from "./styles/index.module.scss";
+import classNames from "classnames";
+import { Button } from "../../components/UI"
 
-const HeaderView = ({ title, onClick, type }) => {
+const HeaderView = ({ title, onClick, type, changeColor, content }) => {
   return (
     <>
-      <header className={style.header}>
+      <header
+        className={classNames(style.header, { [style.whatsapp]: changeColor })}
+      >
         <h1 className={style.header__title}>{title}</h1>
         {type !== "Home" ? (
-          <button className={style.header__button} onClick={onClick}>
-            Перейдите к родительскому узлу
-          </button>
+          <div className={style.header__button}>
+            <Button onClick={onClick}>{content}</Button>
+          </div>
         ) : null}
       </header>
     </>

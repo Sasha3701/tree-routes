@@ -1,0 +1,31 @@
+@import "../../../styles/index.scss";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+    line-height: 30px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background-color: $facebook-color;
+    -webkit-box-shadow: 0px 5px 5px -5px $box-shadow-color;
+    -moz-box-shadow: 0px 5px 5px -5px $box-shadow-color;
+    box-shadow: 0px 5px 5px -5px $box-shadow-color;
+    @media (max-width: 376px) {
+        padding: 10px 20px;
+    }
+    &__title {
+        color: $white-color;
+        margin: 0;
+        padding: 0;
+    }
+    &__button {
+        width: max-content;
+        height: max-content;
+    }
+}
+
+.whatsapp {
+    background-color: $whatsapp-color;
+}
