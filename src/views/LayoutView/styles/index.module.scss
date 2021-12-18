@@ -1,0 +1,10 @@
+.layout__main {
+    width: 100vw;
+    height: calc(100vh - 70px);
+    padding: 20px;
+    box-sizing: border-box;
+    @media (max-width: 376px) {
+        height: calc(100vh - 50px);
+        padding: 10px;
+    }
+}

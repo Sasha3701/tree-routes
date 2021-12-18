@@ -1,5 +1,5 @@
 import style from "./styles/index.module.scss";
-import { Link } from "react-router-dom";
+import { CustomLink } from "../../components/UI";
 
 const ListRoutesView = ({ routes, parent = "", func, nested }) => {
   return (
@@ -9,7 +9,7 @@ const ListRoutesView = ({ routes, parent = "", func, nested }) => {
 
         return (
           <li className={style["list-routes__item"]} key={route.id}>
-            <Link to={path}>{route.title}</Link>
+            <CustomLink to={path}>{route.title}</CustomLink>
             {nested ? func(route.nodes, path) : null}
           </li>
         );

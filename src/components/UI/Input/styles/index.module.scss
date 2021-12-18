@@ -1,0 +1,21 @@
+@import "../../../../styles/index.scss";
+
+.input {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 1px solid $gray-color-1;
+    &:hover {
+        border: 1px solid $black-color;
+    }
+    &:focus {
+        outline: none;
+        border: 1px solid $black-color;
+    }
+    @media (max-width: 376px) {
+        font-size: 14px;
+    }
+}

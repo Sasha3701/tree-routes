@@ -1,0 +1,13 @@
+@import "../../../../styles/index.scss";
+
+.link {
+    color: $black-color;
+    text-decoration: none;
+    font-size: 16px;
+    &:hover {
+        color: $gray-color-1;
+    }
+    @media (max-width: 376px) {
+        font-size: 14px;
+    }
+}

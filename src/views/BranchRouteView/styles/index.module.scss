@@ -1,0 +1,29 @@
+.branch-routes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 427px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__nav {
+        @media (max-width: 427px) {
+            margin-bottom: 10px;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        @media (max-width: 427px) {
+            padding: 10px;
+        }
+    }
+    &__wrapper-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

@@ -1,3 +1,4 @@
+import { Button, Input } from "../../components/UI";
 import { createList } from "../../services";
 import style from "./styles/index.module.scss";
 
@@ -8,14 +9,17 @@ const BranchRouteView = ({ routes, parent, value, onChange, onSubmit }) => {
         {createList(routes, parent, false)}
       </nav>
       <div className={style["branch-routes__form"]}>
-        <input
-          className={style["branch-routes__input"]}
-          value={value}
-          onChange={onChange}
-        />
-        <button className={style["branch-routes__button"]} onClick={onSubmit}>
-          Добавить новый узел
-        </button>
+        <div className={style["branch-routes__wrappet-input"]}>
+          <Input value={value} onChange={onChange} />
+        </div>
+        <div className={style["branch-routes__wrapper-button"]}>
+          <Button
+            theme={routes.length === 0 ? "submit" : "submit-whatsapp"}
+            onClick={onSubmit}
+          >
+            Добавить новый узел
+          </Button>
+        </div>
       </div>
     </div>
   );

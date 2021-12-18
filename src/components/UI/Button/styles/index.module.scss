@@ -9,10 +9,48 @@
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 16px;
+    box-sizing: border-box;
     &:hover {
         color: $gray-color;
     }
     @media (max-width: 376px) {
         font-size: 14px; 
+    }
+}
+
+.submit {
+    font-family: 'Roboto', sans-serif;
+    background-color: $facebook-color;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    color: $white-color;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+        background-color: $facebook-color-1;
+    }
+    &:active {
+        background-color: $gray-color-1;
+    }
+    -webkit-box-shadow: 5px 5px 5px -5px $box-shadow-color;
+    -moz-box-shadow: 5px 5px 5px -5px $box-shadow-color;
+    box-shadow: 5px 5px 5px -5px $box-shadow-color;
+    @media (max-width: 376px) {
+        font-size: 14px; 
+    }
+}
+
+.submit-whatsapp {
+    @extend .submit;
+    background-color: $whatsapp-color;
+    &:hover {
+        background-color: $whatsapp-color-1;
+    }
+    &:active {
+        background-color: $gray-color-1;
     }
 }
