@@ -4,7 +4,15 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import store from "./store";
+import { saveState } from "./store/storage";
+import { debounce } from "debounce";
 import "./styles/index.scss";
+
+store.subscribe(
+  debounce(() => {
+    saveState(store.getState());
+  }, 800)
+);
 
 const app = (
   <BrowserRouter>
