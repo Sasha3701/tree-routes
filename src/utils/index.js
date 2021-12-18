@@ -15,3 +15,11 @@ export const addRoute = (routes, id, route) => {
   customFind(cloneRoutes, id, route);
   return cloneRoutes;
 };
+
+export const validation = (str) => {
+  const value = str.trim();
+  if (value.includes("/")) {
+    return { error: true, value };
+  }
+  return { error: false, value };
+};

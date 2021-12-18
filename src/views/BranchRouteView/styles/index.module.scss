@@ -1,7 +1,7 @@
 .branch-routes {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     @media (max-width: 427px) {
         flex-direction: column;
         justify-content: center;
@@ -11,6 +11,10 @@
         @media (max-width: 427px) {
             margin-bottom: 10px;
         }
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 10px;
     }
     &__form {
         display: flex;

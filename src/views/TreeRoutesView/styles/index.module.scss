@@ -1,6 +1,15 @@
 .tree {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+    &__nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 20px;
+        @media (max-width: 376px) {
+            justify-content: center;
+        }
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 10px;
+    }
 }
