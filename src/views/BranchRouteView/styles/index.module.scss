@@ -2,14 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    @media (max-width: 427px) {
+    @media (max-width: 769px) {
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
-    &__nav {
-        @media (max-width: 427px) {
-            margin-bottom: 10px;
+    &__routes {
+        @media (max-width: 769px) {
+            margin-bottom: 40px;
         }
     }
     &__title {
@@ -22,9 +22,6 @@
         justify-content: center;
         align-items: center;
         width: max-content;
-        @media (max-width: 427px) {
-            padding: 10px;
-        }
     }
     &__wrapper-button {
         width: 100%;
